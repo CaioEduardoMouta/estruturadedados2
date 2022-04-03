@@ -19,14 +19,14 @@ public class TestaMerge {
 				new Nota("Guilherme", 7)
 		};
 		
-		Nota[] rank = junta(notasDoMouta, notasDoCarrazedo);
+		Nota[] rank = intercala(notasDoMouta, notasDoCarrazedo);
 		for(Nota nota: rank) {
 			System.out.println(nota.getAluno() + " " + nota.getValor());
 		}
 		
  	}
 
-	private static Nota[] junta(Nota[] notasDoMouta, Nota[] notasDoCarrazedo) {
+	private static Nota[] intercala(Nota[] notasDoMouta, Nota[] notasDoCarrazedo) {
 		int total = notasDoMouta.length + notasDoCarrazedo.length;
 		Nota[] resultado = new Nota[total];
 		
@@ -52,8 +52,16 @@ public class TestaMerge {
 		}
 		
 		System.out.println("Estou saindo");
-		System.out.println(atualDoMouta < notasDoMouta.length);
-		System.out.println(atualDoCarrazedo < notasDoCarrazedo.length);
+		while(atualDoMouta < notasDoMouta.length) {
+			resultado[atual] = notasDoMouta[atualDoMouta];
+			atual++;
+			atualDoMouta++;
+		}
+		while(atualDoCarrazedo < notasDoCarrazedo.length) {
+			resultado[atual] = notasDoCarrazedo[atualDoCarrazedo];
+			atual++;
+			atualDoCarrazedo++;
+		}
 		return resultado;
 	}
 }
