@@ -1,0 +1,35 @@
+package br.com.alura.notas;
+
+public class TestaPivota {
+	
+public static void main(String[] args) {
+	
+	Nota Caio = new Nota("Caio",7);
+	Nota[] notas = {
+			new Nota("Mariana", 4),
+			
+			new Nota("Maya", 8.7),
+			new Nota("Marlene", 9),
+			new Nota("Carlos", 3),
+			
+			new Nota("Juliana", 6.7),
+			new Nota("Jonas", 7),
+			new Nota("Lucia", 9.3),
+			new Nota("Ana", 10),
+			Caio
+		
+	};
+	
+	quebraNoPivo(notas,0, notas.length);
+}
+
+private static void quebraNoPivo(Nota[] notas, int inicial, int termino) {
+	Nota pivo = notas[termino - 1];
+	for(int analisando = 0; analisando < termino - 1; analisando++) {
+		Nota atual = notas[analisando];
+		if(atual.getValor() <= pivo.getValor()) {
+			
+		}
+	}
+}
+}
