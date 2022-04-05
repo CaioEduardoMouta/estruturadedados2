@@ -21,11 +21,8 @@ public class TestaOrdenacaoRapida {
 		
 		ordena(notas, 0, notas.length);
 		int encontrei = busca(notas, 0, notas.length,9.3);
-		if(encontrei >= 0) {
+		
 		System.out.println(" "+ encontrei + " ");
-		} else { 
-			System.out.println("Não encontrei a nota");
-		}
 
 		for(int atual = 0; atual < notas.length; atual++) {
 			Nota nota = notas[atual];
