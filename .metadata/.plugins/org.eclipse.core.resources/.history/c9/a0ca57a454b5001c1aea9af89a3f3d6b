@@ -20,9 +20,6 @@ public class TestaMenorPreco {
 			}
 		}
 		
-		System.out.println(maisBarato);
-		System.out.println("O carro mais barato " + precos[maisBarato]);
-		
 		
 	}
 }
