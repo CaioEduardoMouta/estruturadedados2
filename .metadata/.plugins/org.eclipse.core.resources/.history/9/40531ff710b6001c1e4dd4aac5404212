@@ -1,0 +1,12 @@
+package br.com.alura.notas;
+
+public class Produto {
+	
+	public Produto(String nome, double i) {
+		
+	}
+	
+	private String nome;
+	private double preco;
+
+}
