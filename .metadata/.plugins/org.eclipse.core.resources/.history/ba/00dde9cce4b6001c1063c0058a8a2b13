@@ -1,0 +1,16 @@
+package br.com.alura.notas;
+
+public class TestaOrdenacao {
+	
+	public static void main(String[] args) {
+		
+		Produto produtos[] = {
+				new Produto("Lamborghini", 100000),
+				new Produto("Jipe", 46000),
+				new Produto("Brasilia", 16000),
+				new Produto("Smart", 46000),
+				 new Produto("Fusca", 17000)
+				 };
+	}
+
+}
