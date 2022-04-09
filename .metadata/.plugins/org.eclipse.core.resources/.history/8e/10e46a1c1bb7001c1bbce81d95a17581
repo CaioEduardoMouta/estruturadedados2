@@ -13,45 +13,15 @@ public class TestaOrdenacao {
 		 };
 		
 		
-		//selectionSort(produtos, produtos.length);
-		novoSort(produtos, produtos.length);
+		ordena(produtos, produtos.length);
 		
-	
-		
-	}
-
-	private static void imprime(Produto[] produtos) {
 		for(Produto produto : produtos) {
 			System.out.println(produto.getNome() + " Custo " + produto.getPreco());
 		}
-	}
-		
-		private static void novoSort(Produto[] produtos, int quantidadeElementos) {
-			for(int atual = 0; atual < quantidadeElementos; atual++) {
-				System.out.println("Estou na casa" + atual );
-				
-				int analise = atual;
-				while(analise > 0 && produtos[analise].getPreco() < produtos[analise-1].getPreco()) {
-					System.out.println("Trocando " + analise + "Com " + (analise - 1));
-					
-					Produto produtoAnalise = produtos[analise];
-					Produto produtoAnaliseMenos1 = produtos[analise -1];
-					System.out.println("Trocando " + produtoAnalise.getNome() 
-										+ "Com " + produtoAnaliseMenos1.getNome());
-					produtos[analise] = produtoAnaliseMenos1;
-					produtos[analise - 1] = produtoAnalise;
-					analise--;
-				}
-				
-				imprime(produtos);
-				System.out.println();
-				System.out.println();
-				System.out.println();
-			}
 		
 	}
-
-		private static void selectionSort(Produto[] produtos, int quantidadeDeElementos) {
+		
+		private static void ordena(Produto[] produtos, int quantidadeDeElementos) {
 			for(int atual = 0; atual < quantidadeDeElementos - 1; atual++) {
 				int menor = buscaMenor(produtos,atual,quantidadeDeElementos -1);
 				

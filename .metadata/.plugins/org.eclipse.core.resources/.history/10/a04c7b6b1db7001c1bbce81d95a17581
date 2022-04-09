@@ -16,14 +16,10 @@ public class TestaOrdenacao {
 		//selectionSort(produtos, produtos.length);
 		novoSort(produtos, produtos.length);
 		
-	
-		
-	}
-
-	private static void imprime(Produto[] produtos) {
 		for(Produto produto : produtos) {
 			System.out.println(produto.getNome() + " Custo " + produto.getPreco());
 		}
+		
 	}
 		
 		private static void novoSort(Produto[] produtos, int quantidadeElementos) {
@@ -36,17 +32,11 @@ public class TestaOrdenacao {
 					
 					Produto produtoAnalise = produtos[analise];
 					Produto produtoAnaliseMenos1 = produtos[analise -1];
-					System.out.println("Trocando " + produtoAnalise.getNome() 
-										+ "Com " + produtoAnaliseMenos1.getNome());
+					System.out.println("Trocando " + produtoAnalise.getNome() + "Com " + produtoAnaliseMenos1.getNome());
 					produtos[analise] = produtoAnaliseMenos1;
 					produtos[analise - 1] = produtoAnalise;
 					analise--;
 				}
-				
-				imprime(produtos);
-				System.out.println();
-				System.out.println();
-				System.out.println();
 			}
 		
 	}
