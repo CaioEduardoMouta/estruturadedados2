@@ -14,7 +14,7 @@ public class TestaOrdenacao {
 		
 		
 		//selectionSort(produtos, produtos.length);
-		insertionSort(produtos, produtos.length);
+		novoSort(produtos, produtos.length);
 		
 	
 		
@@ -26,7 +26,7 @@ public class TestaOrdenacao {
 		}
 	}
 		
-		private static void insertionSort(Produto[] produtos, int quantidadeElementos) {
+		private static void novoSort(Produto[] produtos, int quantidadeElementos) {
 			for(int atual = 1; atual < quantidadeElementos; atual++) {
 				System.out.println("Estou na casa" + atual );
 				
@@ -49,8 +49,6 @@ public class TestaOrdenacao {
 	}
 
 		private static void troca(Produto[] produtos, int primeiro, int segundo) {
-			System.out.println("Estou trocando " + primeiro + " com " + segundo);
-			
 			Produto primeiroProduto = produtos[primeiro];
 			Produto segundoProduto = produtos[segundo];
 			System.out.println("Trocando " + primeiroProduto.getNome() 
